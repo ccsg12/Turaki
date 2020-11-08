@@ -12,35 +12,40 @@ export default props => {
             
             <View style={{ flex: 2.5 }}/>
             <View style={{ marginHorizontal: 20, }}>
-                <Text style={[Estilo.titulo, { color: '#fff'}]}>Login</Text>
+                <Text style={[Estilo.titulo, { color: '#fff'}]}>Cadastro</Text>
             </View>
 
             <View style={style.container}>
-                <View style={{ flex: 3}}>
+
+                <Text style={[Estilo.subtitulo, style.text]}>Junte-se a nós!</Text>
+                <Text>Adoraríamos tê-lo conosco</Text>
+
+                <View style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 30, fontStyle: 'italic'}}>Aqui vão os icons!!!</Text>
                 </View>
-                <Text style={[Estilo.subtitulo, style.text]}>Bem vindo!</Text>
-                <Text>Adoraríamos tê-lo conosco novamente</Text>
+
+                <Text style={{ fontStyle: 'italic' }}>Temos diversas opções de cadastro</Text>
 
                 <View style={{ flex: 3, justifyContent: 'center' }}>
                     <View style={style.inputContainer}>
-                        <TextInput 
-                            placeholder = 'Usuário ou Email                                                                                                 '
-                        />
+                        <TextInput placeholder = 'Usuário                                                                                                    '></TextInput>
                     </View>
                     <View style={style.inputContainer}>
-                        <TextInput placeholder = '************                                                                                               '
-                    />
+                        <TextInput placeholder = 'usuario@email.com                                                                                                         '></TextInput>
+                    </View>
+                    <View style={style.inputContainer}>
+                        <TextInput placeholder = '************                                                                                               '></TextInput>
                     </View>
                 </View>
             
                 <View style={{ flex: 1 }}>
-                    <Botoes title='Avançar' color='#fff' back='#8A2BE2' width={110} height={40}/>
+                    <Botoes title='Avançar' color='#fff' back='#3CB371' width={110} height={40}/>
                 </View>
             </View>
             <View style={{ flex: 1 }}/>
             <View style={style.botoes}>
-                <Botoes title='Login' color='#fff' back='#8A2BE2' onClick={avancar}/>
-                <Botoes title='Cadastro' color='#3CB371' onClick={avancar}/>
+                <Botoes title='Login' color='#8A2BE2' onClick={avancar}/>
+                <Botoes title='Cadastro' color='#fff' back='#3CB371' onClick={avancar}/>
             </View>
         </View>
     )
@@ -63,7 +68,8 @@ const style=StyleSheet.create({
         height: 390,
     },
     text: {
-        color: '#8A2BE2'
+        color: '#3CB371',
+        marginTop: 10,
     },
     botoes:{
         flexDirection: 'row', 

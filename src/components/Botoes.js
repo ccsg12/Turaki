@@ -13,7 +13,7 @@ export default props => {
     
 
     return (
-            <TouchableOpacity style={style}>
+            <TouchableOpacity style={style} onPress = {function() { return (props.onClick(props.title))}}>
                 <Text style={texto}>{[props.title]}</Text>
             </TouchableOpacity>
     )
