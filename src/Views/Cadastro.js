@@ -39,7 +39,7 @@ export default props => {
                 </View>
             
                 <View style={{ flex: 1 }}>
-                    <Botoes title='Avançar' color='#fff' back='#3CB371' width={110} height={40}/>
+                    <Botoes title='Home' color='#fff' back='#3CB371' width={110} height={40} onClick={avancar}/>
                 </View>
             </View>
             <View style={{ flex: 1 }}/>

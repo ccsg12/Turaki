@@ -10,6 +10,7 @@ export default props => {
 
     const texto = [styles.label]
     if (props.color) texto.push({ color: props.color})
+    if (props.fontSize) texto.push({ fontSize: props.fontSize })
     
 
     return (
