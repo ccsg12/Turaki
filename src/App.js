@@ -6,10 +6,10 @@ import Home from './Views/Home'
 export default class App extends Component {
   render() {
     return (
-        <View>
-          <Login />
+        <View style={{ flex: 1 }}>
+          {/* <Login />
           <Cadastro />
-          <Home />
+          <Home /> */}
         </View>
     )
   }

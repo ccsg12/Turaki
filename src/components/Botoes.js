@@ -25,7 +25,7 @@ export default props => {
 const styles = StyleSheet.create({
     container: {
         width: 160,
-        height: 60,
+        height: 50,
         borderRadius: 10,
         backgroundColor: '#fff',
         justifyContent: 'center',
@@ -33,5 +33,6 @@ const styles = StyleSheet.create({
     },
     label: {
         fontSize: 16,
+        // fontFamily: 'Montserrat_700Bold',
     }
 })

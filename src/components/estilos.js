@@ -1,18 +1,23 @@
 import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
+    
     titulo: {
         fontSize: 40,
-        fontWeight: 'bold',
         color: '#fff',
+        // fontFamily: 'Montserrat_700Bold',
     },
     subtitulo: {
-        fontSize: 35,
-        fontWeight: 'bold',
+        fontSize: 32,
+        // fontFamily: 'Montserrat_700Bold',
     },
     subtitulo1: {
-        fontSize: 16,
-        fontWeight: 'bold',
+        fontSize: 15,
         color: '#fff',
-    }
+        // fontFamily: 'Montserrat_700Bold',
+    },
+    normal:{
+        fontSize: 10,
+        // fontFamily: 'Montserrat_400Regular',
+    },
 })
