@@ -23,10 +23,10 @@ export default props => {
                 <Text>Aqui vai a Busca!!!!!</Text>
                 <View style={{ flexDirection: 'row', height: 30, backgroundColor: 'cyan'}}>
                     <View style={style.botoes}>
-                        <Botoes title='Todos' color='#fff' back='#8A2BE2' width={80} height={30} fontSize={12}/>
-                        <Botoes title='Popular' color='#3CB371' width={80} height={30} fontSize={12}/>
-                        <Botoes title='Próximos' color='#fff' back='#8A2BE2' width={80} height={30} fontSize={12}/>
-                        <Botoes title='Recente' color='#3CB371' width={80} height={30} fontSize={12}/>
+                        <Botoes title='Todos' width={80} height={30} fontSize={12}/>
+                        <Botoes title='Popular' width={80} height={30} fontSize={12}/>
+                        <Botoes title='Próximos' width={80} height={30} fontSize={12}/>
+                        <Botoes title='Recente' width={80} height={30} fontSize={12}/>
                     </View>
                 </View>
                 

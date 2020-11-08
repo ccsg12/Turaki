@@ -6,7 +6,7 @@ import Botoes from '../components/Botoes'
 export default props => {
     
     const avancar = a => props.navigation.navigate(a)
-    
+
     return (
         <View style={style.page}>
             
