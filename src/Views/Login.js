@@ -2,6 +2,8 @@ import React from 'react'
 import { View, Text, StyleSheet, TextInput, ImageBackground } from 'react-native'
 import Estilo from '../components/estilos'
 import Botoes from '../components/Botoes'
+import UserIcon from '../components/UserIcon'
+import LockIcon from '../components/LockIcon'
 
 export default props => {
     
@@ -20,23 +22,22 @@ export default props => {
                 <View style={style.container2}>
                     <View style={{ marginBottom: 20, alignItems: 'center'}}>
                         <Text style={[Estilo.subtitulo, style.text]}>Bem vindo!</Text>
-                        <Text styles={[Estilo.normal, { color: '#6644CC'}]}>Adoraríamos tê-lo conosco novamente</Text>
+                        <Text style={[Estilo.normal, { color: '#B53122' }]}>Adoraríamos tê-lo conosco novamente</Text>
                     </View>
                         
                     <View>
                         <View style={style.inputContainer}>
-                            <TextInput 
-                                placeholder = 'Usuário ou Email                                                                                                 '
-                            />
+                            <UserIcon color='#B53122' />
+                            <TextInput placeholder = 'Usuário                                              '></TextInput>
                         </View>
                         <View style={style.inputContainer}>
-                            <TextInput placeholder = '************                                                                                               '
-                            />
+                            <LockIcon color='#B53122'/>
+                            <TextInput placeholder = '************                                      '></TextInput>
                         </View>
                     </View>
                 
                     <View style={{ marginVertical: 10 }}>
-                        <Botoes title='Home' color='#fff' back='#6644CC' width={100} height={35} onClick={avancar}/>
+                        <Botoes title='Home' color='#fff' back='#B53122' width={100} height={35} onClick={avancar}/>
                     </View>
                 </View >
 
@@ -44,7 +45,7 @@ export default props => {
 
             <View style={{ flex: 1 }}/>
             <View style={style.botoes}>
-                <Botoes title='Login' color='#fff' back='#6644CC' onClick={avancar}/>
+                <Botoes title='Login' color='#fff' back='#B53122' onClick={avancar}/>
                 <Botoes title='Cadastro' color='#00BA40' onClick={avancar}/>
             </View>
         </ImageBackground>
@@ -53,7 +54,6 @@ export default props => {
 
 const style=StyleSheet.create({
     page:{
-        backgroundColor: '#8B4513',
         flex: 1,
     },
     container: {
@@ -72,7 +72,7 @@ const style=StyleSheet.create({
         alignItems: 'center',
     },
     text: {
-        color: '#6644CC'
+        color: '#B53122'
     },
     botoes:{
         flexDirection: 'row', 
@@ -83,11 +83,12 @@ const style=StyleSheet.create({
     inputContainer: {
         flexDirection: 'row',
         backgroundColor: '#eee',
+        alignItems: "center",
+        justifyContent:'space-around',
+        paddingHorizontal: 10,
         width: 280,
         height: 40,
         borderRadius: 5,
-        padding: 10,
-        marginVertical: 5,
-        marginHorizontal: 16,
+        margin: 5
     },
 })

@@ -3,6 +3,9 @@ import { View, Text, StyleSheet, TextInput, ImageBackground } from 'react-native
 import Estilo from '../components/estilos'
 import Botoes from '../components/Botoes'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import MailIcon from '../components/mailIcon'
+import LockIcon from '../components/LockIcon'
+import UserIcon from '../components/UserIcon'
 
 export default props => {
     
@@ -23,21 +26,25 @@ export default props => {
                 <Text style={[Estilo.subtitulo, style.text]}>Junte-se a nós!</Text>
                 <Text style={{ color: '#00BA40' }} >Adoraríamos tê-lo conosco</Text>
 
-                <View style={{ flex: 1 }}>
-                    <Icon name="google-plus-square" size={40} />
+                <View style={style.icons}>
+                    <Icon name="google-plus-square" size={40} color='#B53122' />
+                    <Icon name="facebook-square" size={40} color='#2680EB'/>
                 </View>
 
                 <Text style={{ fontStyle: 'italic' }}>Temos diversas opções de cadastro</Text>
 
                 <View style={{ flex: 3, justifyContent: 'center' }}>
                     <View style={style.inputContainer}>
-                        <TextInput placeholder = 'Usuário                                                                                                    '></TextInput>
+                        <UserIcon color='#B53122' />
+                        <TextInput placeholder = 'Usuário                                              '></TextInput>
                     </View>
                     <View style={style.inputContainer}>
-                        <TextInput placeholder = 'usuario@email.com                                                                                                         '></TextInput>
+                        <MailIcon color='#B53122' />
+                        <TextInput placeholder = 'usuario@email.com                       '></TextInput>
                     </View>
                     <View style={style.inputContainer}>
-                        <TextInput placeholder = '************                                                                                               '></TextInput>
+                        <LockIcon color='#B53122'/>
+                        <TextInput placeholder = '************                                      '></TextInput>
                     </View>
                 </View>
             
@@ -47,7 +54,7 @@ export default props => {
             </View>
             <View style={{ flex: 1 }}/>
             <View style={style.botoes}>
-                <Botoes title='Login' color='#6644CC' onClick={avancar}/>
+                <Botoes title='Login' color='#ff0000' onClick={avancar}/>
                 <Botoes title='Cadastro' color='#fff' back='#00BA40' onClick={avancar}/>
             </View>
         </ImageBackground>
@@ -81,10 +88,19 @@ const style=StyleSheet.create({
     inputContainer: {
         flexDirection: 'row',
         backgroundColor: '#eee',
+        alignItems: "center",
+        justifyContent:'space-around',
+        paddingHorizontal: 10,
         width: 280,
         height: 40,
         borderRadius: 5,
-        padding: 10,
         margin: 5
     },
+    icons: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+        width: 200,
+    }
 })

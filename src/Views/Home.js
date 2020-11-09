@@ -22,7 +22,7 @@ export default props => {
                 <Text>Aqui vai a Busca!!!!!</Text>
                 <View style={style.tab}>
                     <View style={style.botoes}>
-                        <Botoes title='Todos' width={80} height={30} fontSize={12} shadow/>
+                        <Botoes title='Todos' width={80} height={30} fontSize={12} back='#B53122' color='#fff'/>
                         <Botoes title='Popular' width={80} height={30} fontSize={12}/>
                         <Botoes title='Próximos' width={80} height={30} fontSize={12}/>
                         <Botoes title='Recente' width={80} height={30} fontSize={12}/>
