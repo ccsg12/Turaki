@@ -2,15 +2,18 @@ import React from 'react'
 import { View, Text, StyleSheet, TextInput, ImageBackground } from 'react-native'
 import Estilo from '../components/estilos'
 import Botoes from '../components/Botoes'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 export default props => {
     
     const avancar = a => props.navigation.navigate(a)
+
+    const googlePlus = <Icon name="arrow-right" size={18} />
     
     return (
         <ImageBackground source={require('../../assets/images/Background1.png')} style={style.page}>
             
-            <View style={{ flex: 2.5 }}/>
+            <View style={{ flex: 1.2 }}/>
             <View style={{ marginHorizontal: 20, }}>
                 <Text style={[Estilo.titulo, { color: '#fff'}]}>Cadastro</Text>
             </View>
@@ -18,10 +21,10 @@ export default props => {
             <View style={style.container}>
 
                 <Text style={[Estilo.subtitulo, style.text]}>Junte-se a nós!</Text>
-                <Text >Adoraríamos tê-lo conosco</Text>
+                <Text style={{ color: '#00BA40' }} >Adoraríamos tê-lo conosco</Text>
 
                 <View style={{ flex: 1 }}>
-                    <Text style={{ fontSize: 30, fontStyle: 'italic'}}>Aqui vão os icons!!!</Text>
+                    <Icon name="google-plus-square" size={40} />
                 </View>
 
                 <Text style={{ fontStyle: 'italic' }}>Temos diversas opções de cadastro</Text>
@@ -53,15 +56,13 @@ export default props => {
 
 const style=StyleSheet.create({
     page:{
-        backgroundColor: '#8B4513',
         flex: 1,
         justifyContent: 'center',
     },
     container: {
-        padding: 5,
         backgroundColor: '#fff',
         alignItems: 'center',
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
         marginHorizontal: 20,
         marginVertical: 10,
         borderRadius: 10,
@@ -75,7 +76,7 @@ const style=StyleSheet.create({
         flexDirection: 'row', 
         justifyContent: 'space-between',
         marginHorizontal: 20,
-        marginBottom: 20,
+        marginBottom: 40,
     },
     inputContainer: {
         flexDirection: 'row',

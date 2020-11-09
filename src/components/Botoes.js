@@ -1,5 +1,5 @@
 import React from 'react'
-import { TouchableOpacity, Text, StyleSheet } from 'react-native'
+import { TouchableOpacity, Text, StyleSheet, Platform } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default props => {
@@ -8,6 +8,7 @@ export default props => {
     if (props.back) style.push({ backgroundColor: props.back})
     if (props.width) style.push({ width: props.width})
     if (props.height) style.push({ height: props.height})
+    // if (props.shadow) style.push({ })
 
     const texto = [styles.label]
     if (props.color) texto.push({ color: props.color})
@@ -29,7 +30,12 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: '#fff',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        shadowColor: "#000",
+        shadowOffset: {	width: 0, height: 1},
+        shadowOpacity: 0.18,
+        shadowRadius: 1.00,
+        elevation: 1,
     },
     label: {
         fontSize: 16,
