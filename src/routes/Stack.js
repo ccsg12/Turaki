@@ -21,7 +21,7 @@ export default props => {
     }
 
     return(
-        <Stack.Navigator initialRouteName= 'Login' screenOptions={{ headerShown: false }}>
+        <Stack.Navigator initialRouteName= 'Home' screenOptions={{ headerShown: false }}>
             <Stack.Screen name='Load' component={Load} />
             <Stack.Screen name='Login' component={Login} />
             <Stack.Screen name='Cadastro' component={Cadastro} />

@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
         shadowOffset: {	width: 0, height: 1},
         shadowOpacity: 0.18,
         shadowRadius: 1.00,
+        marginVertical: 10,
     },
     container2: {
         flexDirection: 'row',

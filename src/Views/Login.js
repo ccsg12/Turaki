@@ -30,13 +30,13 @@ export default props => {
                             <View style={{ marginHorizontal: 20 }}>
                                 <UserIcon color='#B53122' />
                             </View>
-                            <TextInput style={{ fontFamily: 'Montserrat1' }} placeholder = 'Usuário                                              '></TextInput>
+                            <TextInput style={{ fontFamily: 'Montserrat1' }} placeholder = 'Usuário                                              ' />
                         </View>
                         <View style={style.inputContainer}>
                             <View style={{ marginHorizontal: 20 }}>
                                 <LockIcon color='#B53122'/>
                             </View>
-                            <TextInput style={{ fontFamily: 'Montserrat1' }} placeholder = '************                                      '></TextInput>
+                            <TextInput style={{ fontFamily: 'Montserrat1' }} placeholder = '************                                      ' />
                         </View>
                     </View>
                 

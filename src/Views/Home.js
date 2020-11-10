@@ -1,8 +1,10 @@
 import React from 'react'
 import { View, Text, StyleSheet, ScrollView, ImageBackground } from 'react-native'
 import Estilo from '../components/estilos'
-import Botoes from '../components/Botoes'
 import Rests from '../components/Rests'
+import Botoes2 from '../components/Botoes2'
+import { TextInput } from 'react-native-gesture-handler'
+import SearchIcon from '../components/SearchIcon'
 
 export default props => {
     
@@ -19,71 +21,60 @@ export default props => {
             </ImageBackground>
 
             <View style={style.container}>
-                <Text>Aqui vai a Busca!!!!!</Text>
+                <View style={style.inputContainer}>
+                    <View style={{ marginHorizontal: 20 }}>
+                        <SearchIcon />
+                    </View>
+                    <TextInput style={{ fontFamily: 'Montserrat', fontSize: 10 }} placeholder = 'Pesquisar restaurantes                                                          ' />
+                </View>
+
                 <View style={style.tab}>
                     <View style={style.botoes}>
-                        <Botoes title='Todos' width={80} height={30} fontSize={12} back='#B53122' color='#fff'/>
-                        <Botoes title='Popular' width={80} height={30} fontSize={12}/>
-                        <Botoes title='Próximos' width={80} height={30} fontSize={12}/>
-                        <Botoes title='Recente' width={80} height={30} fontSize={12}/>
+                        <Botoes2 title='Todos' back='#B53122' color='#fff'/>
+                        <Botoes2 title='Popular' />
+                        <Botoes2 title='Próximos' />
+                        <Botoes2 title='Recente' />
                     </View>
                 </View>
                 
-                <View style={style.container2}>
-                    <View style={style.container3}>
-                        <View style={style.container4}>
+                <View style={style.container2}>                   
                             <Rests 
                                 title='Boteco do Manolo' 
                                 adress='Estrada do Monteiro, 1200 - Campo Grande' 
                                 stars={4.4}
                                 imagem='BotecoDoManolo'
                             />
-                        </View>
-                        <View>
                             <Rests 
                                 title='Restaurante Broz' 
                                 adress='R. Marquês de Abrantes, 216 - Flamengo' 
                                 stars={4}
                                 imagem='RestauranteBroz'
                             />
-                        </View>
-                    </View>
-                    <View style={style.container3}>
-                        <View style={style.container4}>
                             <Rests 
                                 title='Vikings Steaks & Sandwiches'
                                 adress='R. Alm. João Cândido Brasil, 86 - Maracanã' 
                                 stars={4}
                                 imagem='Vikings'
                             />
-                        </View>
-                        <View>
                             <Rests 
                                 title='Kimura Culinária Japonesa' 
                                 adress='R. Gonzaga Bastos, 56 - Tijuca' 
                                 stars={4}
                                 imagem='Kimura'
-                            />
-                        </View>
-                    </View>
-                    <View style={style.container3}>
-                        <View style={style.container4}>
+                            />     
                             <Rests 
                                 title='Turino Restaurante' 
                                 adress='R. Santa Sofia, 114 - Tijuca' 
                                 stars={4}
                                 imagem='Turino'
                             />
-                        </View>
-                        <View>
                             <Rests 
                                 title='Fogo de Chão' 
                                 adress='Av. Repórter Nestor Moreira, s/n - Botafogo' 
                                 stars={4}
                                 imagem='Fogo'
                             />
-                        </View>
-                    </View>
+                    
                 </View>
 
             </View>
@@ -108,7 +99,6 @@ const style=StyleSheet.create({
     container: {
         flex: 1,
         padding: 5,
-        // backgroundColor: '#eee',
         alignItems: 'center',
         justifyContent: 'space-between',
     },
@@ -119,25 +109,31 @@ const style=StyleSheet.create({
         flexDirection: 'row',
         paddingTop: 5,
         marginVertical: 25,
-        // backgroundColor: 'cyan',
         alignItems: "center",
     },
-    botoes:{
+    botoes: {
         flexDirection: 'row',
         flex: 1, 
         justifyContent: 'space-evenly',
     },
     container2: {
         flex: 1,
-        alignItems: 'center',
+        flexDirection: "row",
+        flexWrap: 'wrap',
         justifyContent: 'space-around',
     },
-    container3: {
-        flex: 1,
-        flexDirection: "row",
-        padding: 10,
+    inputContainer: {
+        flexDirection: 'row',
+        backgroundColor: '#fff',
+        alignItems: "center",
+        width: 350,
+        height: 40,
+        borderRadius: 15,
+        margin: 5,
+        shadowColor: "#000",
+        shadowOffset: {	width: 0, height: 1},
+        shadowOpacity: 0.18,
+        shadowRadius: 1.00,
+        elevation: 1,
     },
-    container4: {
-        flex: 1,
-    }
 })
