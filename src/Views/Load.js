@@ -3,8 +3,8 @@ import { View, StyleSheet, Image } from 'react-native'
 
 export default props => {
 
-    const avancar = () => props.navigation.navigate('Login')
-    setTimeout(avancar, 2000)
+    // const avancar = () => props.navigation.navigate('Login')
+    // setTimeout(avancar, 2000)
 
     return (
         <View style={style.page}>

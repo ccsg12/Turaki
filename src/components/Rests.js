@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet ,Text, TouchableWithoutFeedback, View, ImageBackground } from 'react-native'
+import { StyleSheet ,Text, TouchableWithoutFeedback, View } from 'react-native'
 import Stars from './stars'
 import Imagens from './Imagens'
 
@@ -12,7 +12,7 @@ export default props => {
         <TouchableWithoutFeedback>
             <View style={styles.container}>
                 <Imagens imagem={imagem} />
-                <View style={{ paddingHorizontal: 5, height: 30}}>
+                <View style={{ paddingHorizontal: 10, height: 30}}>
                     <Text style={styles.title}>{props.title}</Text>
                 </View>
                 <View style={styles.container2}>
@@ -20,7 +20,7 @@ export default props => {
                         <Text style={styles.adress}>{props.adress}</Text>
                     </View>
                     <View style={{ width: 60, padding: 5}}>
-                        <Text>{stars}</Text>
+                        {stars}
                     </View>
                 </View>
             </View>
@@ -51,10 +51,11 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 12,
-        fontWeight: "bold",
+        fontFamily: 'Raleway',
     },
     adress: {
-        fontSize: 10,
+        fontFamily: 'Montserrat',
+        fontSize: 9,
         color: '#666',
     }
 })

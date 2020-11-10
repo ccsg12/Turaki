@@ -11,6 +11,7 @@ export default props => {
     // if (props.shadow) style.push({ })
 
     const texto = [styles.label]
+
     if (props.color) texto.push({ color: props.color})
     if (props.fontSize) texto.push({ fontSize: props.fontSize })
     
@@ -39,6 +40,6 @@ const styles = StyleSheet.create({
     },
     label: {
         fontSize: 16,
-        // fontFamily: 'Montserrat_700Bold',
+        fontFamily: 'Montserrat'
     }
 })

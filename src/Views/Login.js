@@ -14,7 +14,7 @@ export default props => {
             
             <View style={{ flex: 1.2 }}/>
             <View style={{ marginHorizontal: 20, }}>
-                <Text style={[Estilo.titulo, { color: '#fff'}]}>Login</Text>
+                <Text style={[Estilo.titulo, { color: '#fff' }]}>Login</Text>
             </View>
 
             <ImageBackground source={require('../../assets/images/Background2.png')} style={style.container}>
@@ -22,17 +22,21 @@ export default props => {
                 <View style={style.container2}>
                     <View style={{ marginBottom: 20, alignItems: 'center'}}>
                         <Text style={[Estilo.subtitulo, style.text]}>Bem vindo!</Text>
-                        <Text style={[Estilo.normal, { color: '#B53122' }]}>Adoraríamos tê-lo conosco novamente</Text>
+                        <Text style={[Estilo.subtitulo2, { color: '#B53122' }]}>Adoraríamos tê-lo conosco novamente</Text>
                     </View>
                         
                     <View>
                         <View style={style.inputContainer}>
-                            <UserIcon color='#B53122' />
-                            <TextInput placeholder = 'Usuário                                              '></TextInput>
+                            <View style={{ marginHorizontal: 20 }}>
+                                <UserIcon color='#B53122' />
+                            </View>
+                            <TextInput style={{ fontFamily: 'Montserrat1' }} placeholder = 'Usuário                                              '></TextInput>
                         </View>
                         <View style={style.inputContainer}>
-                            <LockIcon color='#B53122'/>
-                            <TextInput placeholder = '************                                      '></TextInput>
+                            <View style={{ marginHorizontal: 20 }}>
+                                <LockIcon color='#B53122'/>
+                            </View>
+                            <TextInput style={{ fontFamily: 'Montserrat1' }} placeholder = '************                                      '></TextInput>
                         </View>
                     </View>
                 
@@ -72,7 +76,8 @@ const style=StyleSheet.create({
         alignItems: 'center',
     },
     text: {
-        color: '#B53122'
+        color: '#B53122',
+
     },
     botoes:{
         flexDirection: 'row', 
@@ -84,8 +89,6 @@ const style=StyleSheet.create({
         flexDirection: 'row',
         backgroundColor: '#eee',
         alignItems: "center",
-        justifyContent:'space-around',
-        paddingHorizontal: 10,
         width: 280,
         height: 40,
         borderRadius: 5,

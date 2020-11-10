@@ -18,40 +18,48 @@ export default props => {
             
             <View style={{ flex: 1.2 }}/>
             <View style={{ marginHorizontal: 20, }}>
-                <Text style={[Estilo.titulo, { color: '#fff'}]}>Cadastro</Text>
+                <Text style={[Estilo.titulo, { color: '#fff' }]}>Cadastro</Text>
             </View>
 
             <View style={style.container}>
 
-                <Text style={[Estilo.subtitulo, style.text]}>Junte-se a nós!</Text>
-                <Text style={{ color: '#00BA40' }} >Adoraríamos tê-lo conosco</Text>
+                <Text style={[Estilo.subtitulo, style.text ]}>Junte-se a nós!</Text>
+                <Text style={[Estilo.subtitulo2, { color: '#00BA40' }]} >Adoraríamos tê-lo conosco</Text>
 
                 <View style={style.icons}>
                     <Icon name="google-plus-square" size={40} color='#B53122' />
                     <Icon name="facebook-square" size={40} color='#2680EB'/>
                 </View>
 
-                <Text style={{ fontStyle: 'italic' }}>Temos diversas opções de cadastro</Text>
-
-                <View style={{ flex: 3, justifyContent: 'center' }}>
-                    <View style={style.inputContainer}>
-                        <UserIcon color='#B53122' />
-                        <TextInput placeholder = 'Usuário                                              '></TextInput>
+                <Text style={[Estilo.normal, { color: '#B53122' }]}>Temos diversas opções de cadastro</Text>
+                <ImageBackground source={require('../../assets/images/Logos/LogoParteDireita.png')} style={style.backImage}>
+                    <View style={{ flex: 3, justifyContent: 'center' }}>
+                        <View style={style.inputContainer}>
+                            <View style={{ marginHorizontal: 20 }}>
+                                <UserIcon color='#B53122' />
+                            </View>
+                            <TextInput style={{ fontFamily: 'Montserrat1' }} placeholder = 'Usuário                                              '></TextInput>
+                        </View>
+                        <View style={style.inputContainer}>
+                            <View style={{ marginHorizontal: 20 }}>
+                                <MailIcon color='#B53122' />
+                            </View>
+                            <TextInput style={{ fontFamily: 'Montserrat1' }} placeholder = 'usuario@email.com                          '></TextInput>
+                        </View>
+                        <View style={style.inputContainer}>
+                            <View style={{ marginHorizontal: 20 }}>
+                                <LockIcon color='#B53122'/>
+                            </View>
+                            <TextInput style={{ fontFamily: 'Montserrat1' }} placeholder = '************                                      '></TextInput>
+                        </View>
                     </View>
-                    <View style={style.inputContainer}>
-                        <MailIcon color='#B53122' />
-                        <TextInput placeholder = 'usuario@email.com                       '></TextInput>
+                
+                    <View style={{ flex: 1 }}>
+                        <Botoes title='Home' color='#fff' back='#00BA40' width={110} height={40} onClick={avancar}/>
                     </View>
-                    <View style={style.inputContainer}>
-                        <LockIcon color='#B53122'/>
-                        <TextInput placeholder = '************                                      '></TextInput>
-                    </View>
-                </View>
-            
-                <View style={{ flex: 1 }}>
-                    <Botoes title='Home' color='#fff' back='#00BA40' width={110} height={40} onClick={avancar}/>
-                </View>
+                </ImageBackground>
             </View>
+            
             <View style={{ flex: 1 }}/>
             <View style={style.botoes}>
                 <Botoes title='Login' color='#ff0000' onClick={avancar}/>
@@ -69,11 +77,16 @@ const style=StyleSheet.create({
     container: {
         backgroundColor: '#fff',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         marginHorizontal: 20,
         marginVertical: 10,
         borderRadius: 10,
         height: 415,
+    },
+    backImage: {
+        flex: 1,
+        alignItems: 'center',
+
     },
     text: {
         color: '#00BA40',
@@ -89,18 +102,17 @@ const style=StyleSheet.create({
         flexDirection: 'row',
         backgroundColor: '#eee',
         alignItems: "center",
-        justifyContent:'space-around',
-        paddingHorizontal: 10,
         width: 280,
         height: 40,
         borderRadius: 5,
-        margin: 5
+        marginHorizontal: 27.5,
+        marginVertical: 5, 
     },
     icons: {
-        flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         alignItems: 'center',
         width: 200,
+        marginVertical: 10,
     }
 })
