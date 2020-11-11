@@ -91,10 +91,10 @@ const style=StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         padding: 20,
-        borderBottomEndRadius: 30,
-        borderBottomStartRadius: 30,
+        borderBottomEndRadius: 20,
+        borderBottomStartRadius: 20,
         height: 300,
-        backgroundColor: 'rgba(0,0,0,0.5)'
+        backgroundColor: 'rgba(0,0,0,0.6)'
     },
     container: {
         flex: 1,

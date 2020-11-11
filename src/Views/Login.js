@@ -41,7 +41,7 @@ export default props => {
                     </View>
                 
                     <View style={{ marginVertical: 10 }}>
-                        <Botoes title='Home' color='#fff' back='#B53122' width={100} height={35} onClick={avancar}/>
+                        <Botoes title='TabNav' color='#fff' back='#B53122' width={100} height={35} onClick={avancar}/>
                     </View>
                 </ImageBackground >
 
