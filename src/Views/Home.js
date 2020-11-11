@@ -12,7 +12,7 @@ export default props => {
         <ScrollView style={style.page}>
             <ImageBackground source={require('../../assets/images/Background3.png')} style={{ height: 300 }}>
                 <View style={style.header}>
-                    <View><Text style={{ color: '#fff' }}>Aqui vai o drawer</Text></View>
+                    <View><Text style={{ color: '#fff' }}></Text></View>
                     <Text style={Estilo.titulo}>Home</Text>
                     <View style={{ width: 200}}>
                         <Text style={Estilo.subtitulo1}>Onde você gostaria de reservar a sua mesa?</Text>

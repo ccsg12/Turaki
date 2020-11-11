@@ -20,8 +20,8 @@ export default props => {
             <View style={{ marginHorizontal: 20, }}>
                 <Text style={[Estilo.titulo, { color: '#fff' }]}>Cadastro</Text>
             </View>
-
-            <View style={style.container}>
+            
+            <ImageBackground source={require('../../assets/images/Logos/LogoParteDireita1.png')} style={style.container}>
 
                 <Text style={[Estilo.subtitulo, style.text ]}>Junte-se a nós!</Text>
                 <Text style={[Estilo.subtitulo2, { color: '#00BA40' }]} >Adoraríamos tê-lo conosco</Text>
@@ -32,7 +32,7 @@ export default props => {
                 </View>
 
                 <Text style={[Estilo.normal, { color: '#B53122' }]}>Temos diversas opções de cadastro</Text>
-                <ImageBackground source={require('../../assets/images/Logos/LogoParteDireita.png')} style={style.backImage}>
+                <View style={style.backImage}>
                     <View style={{ flex: 3, justifyContent: 'center' }}>
                         <View style={style.inputContainer}>
                             <View style={{ marginHorizontal: 20 }}>
@@ -57,8 +57,8 @@ export default props => {
                     <View style={{ flex: 1 }}>
                         <Botoes title='Home' color='#fff' back='#00BA40' width={110} height={40} onClick={avancar}/>
                     </View>
-                </ImageBackground>
-            </View>
+                </View>
+            </ImageBackground>
             
             <View style={{ flex: 1 }}/>
             <View style={style.botoes}>

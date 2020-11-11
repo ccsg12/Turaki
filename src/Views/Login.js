@@ -19,7 +19,7 @@ export default props => {
 
             <ImageBackground source={require('../../assets/images/Background2.png')} style={style.container}>
 
-                <View style={style.container2}>
+                <ImageBackground source={require('../../assets/images/Logos/LogoParteEsquerda1.png')} style={style.container2}>
                     <View style={{ marginBottom: 20, alignItems: 'center'}}>
                         <Text style={[Estilo.subtitulo, style.text]}>Bem vindo!</Text>
                         <Text style={[Estilo.subtitulo2, { color: '#B53122' }]}>Adoraríamos tê-lo conosco novamente</Text>
@@ -43,7 +43,7 @@ export default props => {
                     <View style={{ marginVertical: 10 }}>
                         <Botoes title='Home' color='#fff' back='#B53122' width={100} height={35} onClick={avancar}/>
                     </View>
-                </View >
+                </ImageBackground >
 
             </ImageBackground>
 
@@ -92,6 +92,7 @@ const style=StyleSheet.create({
         width: 280,
         height: 40,
         borderRadius: 5,
-        margin: 5
+        marginVertical: 5,
+        marginHorizontal: 17.5,
     },
 })
