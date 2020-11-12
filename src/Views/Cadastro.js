@@ -78,7 +78,7 @@ export default (props) => {
 
           <View style={{ flex: 1 }}>
             <Botoes
-              title="Home"
+              title="TabNav"
               color="#fff"
               back="#00BA40"
               width={110}

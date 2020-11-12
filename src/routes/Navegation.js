@@ -1,11 +1,12 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { useFonts } from "expo-font";
 import Cadastro from "../Views/Cadastro";
 import Login from "../Views/Login";
 import Home from "../Views/Home";
 import Load from "../Views/Load";
-import { useFonts } from "expo-font";
+import Reservations from "../Views/Reservations";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import UserIcon from "../components/UserIcon";
 import Perfil from "../Views/Perfil";
@@ -43,22 +44,25 @@ const TabNav = () => {
     <Tab.Navigator
       initialRouteName="Perfil"
       screenOptions={({ route }) => ({
-        tabBarIcon: ({ focused, color, size }) => {
+        tabBarIcon: ({ color, size }) => {
           switch (route.name) {
             case "Home":
               return <Ionicons name="ios-home" size={size} color={color} />;
-              break;
             case "Perfil":
               return <UserIcon size={size} color={color} />;
+            case "Reservations":
+              return <Ionicons name="ios-calendar" size={size} color={color} />;
           }
         },
       })}
       tabBarOptions={{
+        showLabel: false,
         activeTintColor: "#B53122",
         inactiveTintColor: "gray",
       }}
     >
       <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Reservations" component={Reservations} />
       <Tab.Screen name="Perfil" component={Perfil} />
     </Tab.Navigator>
   );

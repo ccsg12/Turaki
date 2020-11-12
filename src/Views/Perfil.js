@@ -79,7 +79,7 @@ export default (props) => {
           </View>
           <TextInput
             style={{ fontFamily: "Montserrat1" }}
-            placeholder="Masculino                                                "
+            placeholder="Masculino                                                  "
           />
         </View>
       </View>
