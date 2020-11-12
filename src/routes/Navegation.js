@@ -27,7 +27,7 @@ export default (props) => {
 
   return (
     <Stack.Navigator
-      initialRouteName="TabNav"
+      initialRouteName="Login"
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name="Load" component={Load} />
