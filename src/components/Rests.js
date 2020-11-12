@@ -8,7 +8,11 @@ export default (props) => {
   const imagem = props.imagem;
 
   return (
-    <TouchableWithoutFeedback>
+    <TouchableWithoutFeedback
+      onPress={function () {
+        return props.onClick("Boteco");
+      }}
+    >
       <View style={styles.container}>
         <Imagens imagem={imagem} />
         <View style={{ paddingHorizontal: 10, height: 30 }}>

@@ -13,6 +13,8 @@ import { TextInput } from "react-native-gesture-handler";
 import SearchIcon from "../components/SearchIcon";
 
 export default (props) => {
+  const avancar = (a) => props.navigation.navigate(a);
+
   return (
     <ScrollView style={style.page}>
       <ImageBackground
@@ -58,6 +60,7 @@ export default (props) => {
             adress="Estrada do Monteiro, 1200 - Campo Grande"
             stars={4.4}
             imagem="BotecoDoManolo"
+            onClick={avancar}
           />
           <Rests
             title="Restaurante Broz"

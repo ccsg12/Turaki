@@ -10,6 +10,7 @@ import Reservations from "../Views/Reservations";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import UserIcon from "../components/UserIcon";
 import Perfil from "../Views/Perfil";
+import Boteco from "../Views/Boteco";
 
 const Stack = createStackNavigator();
 
@@ -33,6 +34,7 @@ export default (props) => {
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Cadastro" component={Cadastro} />
       <Stack.Screen name="TabNav" component={TabNav} />
+      <Stack.Screen name="Boteco" component={Boteco} />
     </Stack.Navigator>
   );
 };
@@ -42,7 +44,7 @@ const Tab = createBottomTabNavigator();
 const TabNav = () => {
   return (
     <Tab.Navigator
-      initialRouteName="Perfil"
+      initialRouteName="Home"
       screenOptions={({ route }) => ({
         tabBarIcon: ({ color, size }) => {
           switch (route.name) {
@@ -64,6 +66,7 @@ const TabNav = () => {
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Reservations" component={Reservations} />
       <Tab.Screen name="Perfil" component={Perfil} />
+      {/* <Tab.Screen name="Boteco" component={Boteco} /> */}
     </Tab.Navigator>
   );
 };
